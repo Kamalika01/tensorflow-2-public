@@ -43,8 +43,7 @@
                     }
                 }
                 // YOUR CODE HERE
-                
-            });
+             });
             
             // Convert the testing data into arrays in the space below.
             // Note: In this case, the labels are integers, not strings.
@@ -55,9 +54,7 @@
                   testingData.map(({xs, ys}) => {
                       return{ xs: Object.values(xs), ys: Object.values(ys)};
                   }).batch(10);
-                  
-                  
-
+             
             // Specify the number of features in the space below.
             // HINT: You can get the number of features from the number of columns
             // and the number of labels in the training data. 
@@ -77,9 +74,6 @@
             model.add(tf.layers.dense({inputShape: [numOfFeatures], activation: "relu", units: 10}))
             model.add(tf.layers.dense({activation: "sigmoid", units: 1}));
             // YOUR CODE HERE
-
-            
-            
             // Compile the model using the binaryCrossentropy loss, 
             // the rmsprop optimizer, and accuracy for your metrics. 
            // model.compile(// YOUR CODE HERE);
@@ -93,7 +87,7 @@
                                       console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
                                   }
                               }});
-            await model.save('downloads://my_model');
+            await model.save('E:\New Download\tensorflow-2-public-ea58bb0cc6f7722c50750afe666bb8a873be49c3\W1');
         }
         run();
     </script>
